@@ -1,16 +1,9 @@
 version: "3"
 services:
   web:
-    container_name: fog-web
+    container_name: cloud
     restart: always
     build: .
     ports:
-    - "3000:3000"
-    depends_on:
-      - mongo
+    - "8001:8001"
 
-  mongo:
-    container_name: fog_mongo
-    image: mongo
-    ports:
-      - "27017:27017"
